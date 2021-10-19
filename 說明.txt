@@ -27,5 +27,6 @@ Deadline: 23:59, Oct. 20, 2021
 
 Grade will givend based on detection performance and descriptions in your report
 
+How to install packages?
 cd "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\"
-python.exe -m pip install cv2
+python.exe -m pip install {package name}
