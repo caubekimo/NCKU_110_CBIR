@@ -1,0 +1,22 @@
+2.1
+(1) 使用 Visual Studio 執行 HomeWork\HomeWork.sln
+(2) 使用 Visual Studio 執行 PythonComparePics\PythonComparePics.sln
+(3) 兩個專案都按 F5 進入 debug 模式
+(4) 在 HomeWork 專案中的 Form1.cs 的第 72 行，按 F9 插入一個中斷點
+(5) 在 HomeWork 跳出來的小視窗中，點選 ... 按鈕，選擇 photoset 所在資料夾，按 OK
+(6) 選完之後會自動打 Web API 到 python 中，計算 aHash, dHash, pHash, 單通道直方圖相似度, 三通道值方圖相似度
+(7) 程式會停在 HomeWork 專案中的 Form1.cs 的第 67 ~ 71 行，把每個 _query 資料夾中的圖片所比對出來的前 5 名抓出來看
+
+2.2
+feature: 抓出每張圖片的不同 hash 值以及單通道/三通道直方圖，計算Hamming distance，以及對直方圖的重疊部分進行比對
+algorithms: 三種 hash 計算方式，包含 aHash,dHash, pHash，以及兩種通道的直方圖
+
+2.3
+總共比對5160次，每張 _query 中的圖片會進行 5160 / 4 = 1290 次比對，以 i7 CPU 執行，共執行 12 秒
+四張圖片有三張可以找到完全相同的圖片，找不到完全一樣的是 query_bicycle.jpg，準確率是 3/4
+
+另外，
+quert_ponda.jpg 最像的圖片，單通道是 \\panda\\panda_02.jpg，雙通道是 \\panda\\panda_02.jpg
+query_bicycle.jpg 最像的圖片，單通道是 \\bicycle\\bicycle_20.jpg，雙通道是 \\bicycle\\bicycle_01.jpg
+query_greenery.jpg 最像的圖片，單通道是 \\greenery\\greenery_10.jpg，雙通道是 \\greenery\\greenery_10.jpg
+query_sunflower.jpg 最像的圖片，單通道是 \\sunflower\\sunflower_16.jpg，雙通道是 \\sunflower\\sunflower_16.jpg
